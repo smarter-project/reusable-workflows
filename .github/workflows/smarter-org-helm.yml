@@ -3,6 +3,13 @@ name: Release Charts
 
 on:
   workflow_call:
+    secrets:
+      GPG_KEYRING_BASE64:
+        required: true
+      GPG_PASSPHRASE:
+        required: true
+      GITHUB_TOKEN:
+        required: true
 
 jobs:
   release:
